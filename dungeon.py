@@ -183,14 +183,14 @@ def generate(cellsX, cellsY, cellSize=5):
             tiles[xy] = "#"
     tiles[stairsUp] = "<"
     tiles[stairsDown] = ">"
-
-    for y in range(tilesY):
-        for x in range(tilesX):
-            sys.stdout.write(tiles[(x, y)])
-        sys.stdout.write("\n")
-
+    
+    if __name__ == "__main__":
+        for y in range(tilesY):
+            for x in range(tilesX):
+                sys.stdout.write(tiles[(x, y)])
+            sys.stdout.write("\n")
     return tiles
 
 
 if __name__ == "__main__":
-    generate(8, 5, 8)
+    tile_dict = generate(8, 5, 8)
